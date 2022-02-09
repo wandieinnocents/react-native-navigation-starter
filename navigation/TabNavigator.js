@@ -1,5 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 
 import {
   MainStackNavigator,
@@ -9,18 +10,20 @@ import {
 } from "./StackNavigator";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-const Tab = createBottomTabNavigator();
+// Material tabs
+const Tab = createMaterialBottomTabNavigator();
+// basic tabs
+// const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
   return (
-
-    <Tab.Navigator 
-    screenOptions={{ headerShown: false  }}
-    labeled={false} 
-    barStyle={{ backgroundColor: 'black' }} 
-    
-    activeColor="white" >
-    {/* Screens */}
+    <Tab.Navigator
+      screenOptions={{ headerShown: false }}
+      // labeled={false}
+      barStyle={{ backgroundColor: "purple" }}
+      activeColor="white"
+    >
+      {/* Screens */}
       <Tab.Screen
         name="HomePage"
         component={MainStackNavigator} //Home Screen
