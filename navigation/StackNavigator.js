@@ -31,6 +31,7 @@ const MainStackNavigator = () => {
   );
 }
 
+// contact navigator
 const ContactStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
@@ -39,4 +40,22 @@ const ContactStackNavigator = () => {
   );
 }
 
-export { MainStackNavigator, ContactStackNavigator };
+// gallery navigator
+const GalleryStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Gallery" component={Gallery} />
+    </Stack.Navigator>
+  );
+}
+// service navigator
+const ServiceStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Services" component={Services} />
+    </Stack.Navigator>
+  );
+}
+
+
+export { MainStackNavigator, ContactStackNavigator, GalleryStackNavigator,ServiceStackNavigator };

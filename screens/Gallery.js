@@ -4,7 +4,7 @@ import { View, StyleSheet, Text } from "react-native";
 const Gallery = () => {
   return (
     <View style={styles.center}>
-      <Text>This is the gallery page screen</Text>
+      <Text>This is the NEW gallery page screen</Text>
     </View>
   );
 };
