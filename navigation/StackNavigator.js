@@ -9,17 +9,13 @@ import Services from "../screens/Services";
 import Profile from "../screens/Profile";
 import History from "../screens/History";
 import Support from "../screens/Support";
-
-
-
-
-
+import Repair from "../screens/Repair";
 
 const Stack = createStackNavigator();
 
 const screenOptionStyle = {
   headerStyle: {
-    backgroundColor: "#9AC4F8",
+    backgroundColor: "purple",
   },
   headerTintColor: "white",
   headerBackTitle: "Back",
@@ -29,36 +25,32 @@ const screenOptionStyle = {
 const MainStackNavigator = () => {
   return (
     <Stack.Navigator
-     screenOptions={screenOptionStyle}
-    //  screenOptions={{ headerShown: false }}s
-    
+      screenOptions={screenOptionStyle}
+      //  screenOptions={{ headerShown: false }}s
     >
-      <Stack.Screen 
-      name="Home" 
-      component={Home}
-
-      // hide header
-      options={{ headerShown: false }}
-      
-       />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        // hide header
+        options={{ headerShown: false }}
+      />
       <Stack.Screen name="About" component={About} />
       <Stack.Screen name="Gallery" component={Gallery} />
       <Stack.Screen name="Services" component={Services} />
+      <Stack.Screen name="Repair" component={Repair} />
+      
     </Stack.Navigator>
   );
-}
+};
 
 // contact navigator
 const ContactStackNavigator = () => {
   return (
-    <Stack.Navigator 
-    screenOptions={screenOptionStyle}
-    
-    >
+    <Stack.Navigator screenOptions={screenOptionStyle}>
       <Stack.Screen name="Contact" component={Contact} />
     </Stack.Navigator>
   );
-}
+};
 
 // gallery navigator
 const GalleryStackNavigator = () => {
@@ -67,7 +59,7 @@ const GalleryStackNavigator = () => {
       <Stack.Screen name="Gallery" component={Gallery} />
     </Stack.Navigator>
   );
-}
+};
 // service navigator
 const ServiceStackNavigator = () => {
   return (
@@ -75,7 +67,7 @@ const ServiceStackNavigator = () => {
       <Stack.Screen name="Services" component={Services} />
     </Stack.Navigator>
   );
-}
+};
 
 //ProfileStackNavigator
 const ProfileStackNavigator = () => {
@@ -84,7 +76,7 @@ const ProfileStackNavigator = () => {
       <Stack.Screen name="Profiles" component={Profile} />
     </Stack.Navigator>
   );
-}
+};
 
 // History Navigation
 const HistoryStackNavigator = () => {
@@ -93,7 +85,7 @@ const HistoryStackNavigator = () => {
       <Stack.Screen name="Historys" component={History} />
     </Stack.Navigator>
   );
-}
+};
 
 // support navigation
 const SupportStackNavigator = () => {
@@ -102,19 +94,24 @@ const SupportStackNavigator = () => {
       <Stack.Screen name="Supports" component={Support} />
     </Stack.Navigator>
   );
-}
+};
 
+// Repair Navigation
+const RepairStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Repair" component={Repair} />
+    </Stack.Navigator>
+  );
+};
 
-
-
-
-export { 
+export {
   MainStackNavigator,
-   ContactStackNavigator, 
-   GalleryStackNavigator,
-   ServiceStackNavigator, 
-   ProfileStackNavigator,
-   HistoryStackNavigator,
-   SupportStackNavigator
-  
-  };
+  ContactStackNavigator,
+  GalleryStackNavigator,
+  ServiceStackNavigator,
+  ProfileStackNavigator,
+  HistoryStackNavigator,
+  SupportStackNavigator,
+  RepairStackNavigator,
+};

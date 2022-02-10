@@ -1,91 +1,101 @@
 import React from "react";
-import { StyleSheet, Text, View, Button, ImageBackground,SafeAreaView, ScrollView,} from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  ImageBackground,
+  SafeAreaView,
+  ScrollView,
+} from "react-native";
 
 const Home = ({ navigation }) => {
+  // Navigation
+  // Go to repair
+  const goToRepair = () => {
+    navigation.navigate("Repair");
+  };
+
   return (
     <SafeAreaView style={styles.container}>
-    <ScrollView style={styles.scrollView}>
-  
-  <View style={styles.mainContainer}>
-    {/* Curved shape */}
-    <View style={styles.mainTopBannerShape}>
-      <ImageBackground
-        style={styles.imgBackground}
-        resizeMode="cover"
-        source={require("../assets/images/bike.jpg")}
-      ></ImageBackground>
-    </View>
-    {/* End of curved shape */}
-
-    {/* Card container section  */}
-    <View style={styles.mainCardContainerSection}>
-      {/* Card Container 1 */}
-
-      <View style={styles.cardRowContainerOne}>
-        {/* Row card  */}
-        <View style={styles.cardItemOne} >
-          <ImageBackground
-            style={styles.imgBackground}
-            resizeMode="cover"
-            source={require("../assets/images/1.png")}
-          ></ImageBackground>
-
-          <View style={styles.cardDetails} >
-            <Text >REPAIR </Text>
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.mainContainer}>
+          {/* Curved shape */}
+          <View style={styles.mainTopBannerShape}>
+            <ImageBackground
+              style={styles.imgBackground}
+              resizeMode="cover"
+              source={require("../assets/images/bike.jpg")}
+            ></ImageBackground>
           </View>
-        </View>
-        <View style={styles.cardItemTwo}>
-          <ImageBackground
-            style={styles.imgBackground}
-            resizeMode="cover"
-            source={require("../assets/images/2.png")}
-          ></ImageBackground>
+          {/* End of curved shape */}
 
-          <View style={styles.cardDetails}>
-            <Text>PROFILE </Text>
+          {/* Card container section  */}
+          <View style={styles.mainCardContainerSection}>
+            {/* Card Container 1 */}
+
+            <View style={styles.cardRowContainerOne}>
+              {/* Row card  */}
+              <View style={styles.cardItemOne}>
+                <ImageBackground
+                  style={styles.imgBackground}
+                  resizeMode="cover"
+                  source={require("../assets/images/1.png")}
+                ></ImageBackground>
+
+                <View style={styles.cardDetails}>
+                  <Text onPress={goToRepair}>REPAIR </Text>
+                </View>
+              </View>
+              <View style={styles.cardItemTwo}>
+                <ImageBackground
+                  style={styles.imgBackground}
+                  resizeMode="cover"
+                  source={require("../assets/images/2.png")}
+                ></ImageBackground>
+
+                <View style={styles.cardDetails}>
+                  <Text>PROFILE </Text>
+                </View>
+              </View>
+            </View>
+            {/* End of card container 1 */}
+
+            {/* Card container 2 */}
+
+            <View style={styles.cardRowContainerTwo}>
+              {/* Row card  */}
+              <View style={styles.cardItemThree}>
+                <ImageBackground
+                  style={styles.imgBackground}
+                  resizeMode="cover"
+                  source={require("../assets/images/3.png")}
+                ></ImageBackground>
+
+                <View style={styles.cardDetails}>
+                  <Text>SERVICES </Text>
+                </View>
+              </View>
+              <View style={styles.cardItemFour}>
+                <ImageBackground
+                  style={styles.imgBackground}
+                  resizeMode="cover"
+                  source={require("../assets/images/6.png")}
+                ></ImageBackground>
+
+                <View style={styles.cardDetails}>
+                  <Text>ACCOUNT </Text>
+                </View>
+              </View>
+            </View>
+
+            {/* End of card container 2 */}
           </View>
+          {/* End of card container section */}
         </View>
-      </View>
-      {/* End of card container 1 */}
-
-      {/* Card container 2 */}
-
-      <View style={styles.cardRowContainerTwo}>
-        {/* Row card  */}
-        <View style={styles.cardItemThree}>
-          <ImageBackground
-            style={styles.imgBackground}
-            resizeMode="cover"
-            source={require("../assets/images/3.png")}
-          ></ImageBackground>
-
-          <View style={styles.cardDetails}>
-            <Text>SERVICES </Text>
-          </View>
-        </View>
-        <View style={styles.cardItemFour}>
-          <ImageBackground
-            style={styles.imgBackground}
-            resizeMode="cover"
-            source={require("../assets/images/6.png")}
-          ></ImageBackground>
-
-          <View style={styles.cardDetails}>
-            <Text>ACCOUNT </Text>
-          </View>
-        </View>
-      </View>
-
-      
-      {/* End of card container 2 */}
-    </View>
-    {/* End of card container section */}
-  </View>
-  </ScrollView>
-  </SafeAreaView>
-
- 
-);
+      </ScrollView>
+    </SafeAreaView>
+  );
 };
 
 // stylesheet
@@ -93,11 +103,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 5,
-    
   },
   scrollView: {
-    backgroundColor: '#fff',
-    
+    backgroundColor: "#fff",
   },
 
   // image background
@@ -233,7 +241,6 @@ const styles = StyleSheet.create({
   cardDetails: {
     padding: 3,
   },
-
 });
 
 export default Home;

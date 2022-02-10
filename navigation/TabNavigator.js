@@ -22,6 +22,9 @@ const BottomTabNavigator = () => {
       // labeled={false}
       barStyle={{ backgroundColor: "purple" }}
       activeColor="white"
+
+      
+    
     >
       {/* Screens */}
       <Tab.Screen
