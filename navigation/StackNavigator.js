@@ -33,7 +33,14 @@ const MainStackNavigator = () => {
     //  screenOptions={{ headerShown: false }}s
     
     >
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen 
+      name="Home" 
+      component={Home}
+
+      // hide header
+      options={{ headerShown: false }}
+      
+       />
       <Stack.Screen name="About" component={About} />
       <Stack.Screen name="Gallery" component={Gallery} />
       <Stack.Screen name="Services" component={Services} />

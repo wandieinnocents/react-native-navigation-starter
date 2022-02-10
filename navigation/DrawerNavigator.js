@@ -27,12 +27,14 @@ const DrawerNavigator = () => {
             <MaterialCommunityIcons name="home" color="purple" size={26} />
           ),}}
     >
+   
       <Drawer.Screen
         name="HomeUI"
         component={TabNavigator}
         // icon
         options={{
           title: "HomeUI",
+          // headerShown: false,
           drawerIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="home" color="purple" size={26} />
           ),
