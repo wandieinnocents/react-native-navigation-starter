@@ -2,7 +2,13 @@ import React from "react";
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
 
-import { ContactStackNavigator, ServiceStackNavigator } from "./StackNavigator";
+import { ContactStackNavigator, 
+  ServiceStackNavigator ,
+  ProfileStackNavigator,
+  HistoryStackNavigator,
+  SupportStackNavigator
+
+} from "./StackNavigator";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 import TabNavigator from "./TabNavigator";
@@ -14,6 +20,12 @@ const DrawerNavigator = () => {
     <Drawer.Navigator
       // customize drawer
       screenOptions={{ headerShown: false }}
+     
+      options={{
+          title: "HomeUI",
+          drawerIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="home" color="purple" size={26} />
+          ),}}
     >
       <Drawer.Screen
         name="HomeUI"
@@ -50,7 +62,7 @@ const DrawerNavigator = () => {
       />
       <Drawer.Screen
         name="ProfileUI"
-        component={ServiceStackNavigator}
+        component={ProfileStackNavigator}
         // icon
         options={{
           title: "ProfileUI",
@@ -61,7 +73,7 @@ const DrawerNavigator = () => {
       />
       <Drawer.Screen
         name="HistoryUI"
-        component={ServiceStackNavigator}
+        component={HistoryStackNavigator}
         // icon
         options={{
           title: "HistoryUI",
@@ -72,7 +84,7 @@ const DrawerNavigator = () => {
       />
       <Drawer.Screen
         name="SuportUI"
-        component={ServiceStackNavigator}
+        component={SupportStackNavigator}
         // icon
         options={{
           title: "SuportUI",

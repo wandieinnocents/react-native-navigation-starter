@@ -6,6 +6,11 @@ import About from "../screens/About";
 import Contact from "../screens/Contact";
 import Gallery from "../screens/Gallery";
 import Services from "../screens/Services";
+import Profile from "../screens/Profile";
+import History from "../screens/History";
+import Support from "../screens/Support";
+
+
 
 
 
@@ -20,6 +25,7 @@ const screenOptionStyle = {
   headerBackTitle: "Back",
 };
 
+// Main stack navigation
 const MainStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
@@ -57,5 +63,44 @@ const ServiceStackNavigator = () => {
   );
 }
 
+//ProfileStackNavigator
+const ProfileStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Profiles" component={Profile} />
+    </Stack.Navigator>
+  );
+}
 
-export { MainStackNavigator, ContactStackNavigator, GalleryStackNavigator,ServiceStackNavigator };
+// History Navigation
+const HistoryStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Historys" component={History} />
+    </Stack.Navigator>
+  );
+}
+
+// support navigation
+const SupportStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Supports" component={Support} />
+    </Stack.Navigator>
+  );
+}
+
+
+
+
+
+export { 
+  MainStackNavigator,
+   ContactStackNavigator, 
+   GalleryStackNavigator,
+   ServiceStackNavigator, 
+   ProfileStackNavigator,
+   HistoryStackNavigator,
+   SupportStackNavigator
+  
+  };

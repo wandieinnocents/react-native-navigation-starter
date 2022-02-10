@@ -15,7 +15,16 @@ const Home = ({ navigation }) => {
         title="Go to galery Screen"
         onPress={() => navigation.navigate("Gallery")} // We added an onPress event which would navigate to the About screen
       />
+
+<Text>This is the gallery screen</Text>
+      <Button
+        title="Go to SERVICES Screen"
+        onPress={() => navigation.navigate("Services")} // We added an onPress event which would navigate to the About screen
+      />
+
     </View>
+
+    
   );
 };
 
